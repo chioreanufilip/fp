@@ -1,0 +1,12 @@
+def Worter_ersetzer():
+    n = input('Pfad zur Datei: ')
+    m = input('Wort zu ersetzen: ')
+    o = input('Ersatzwort: ')
+    f = open(n, 'r+')
+    content = f.read()
+    count = content.count(m)
+    f = open(n, 'w+')
+    f.write(content.replace(m, o))
+    f.close()
+    print("Ersetzt '" + m + "' durch '" + o + "' an " + str(count) + ' Stellen')
+Worter_ersetzer()
